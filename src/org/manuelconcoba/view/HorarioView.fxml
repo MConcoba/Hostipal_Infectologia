@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.manuelconcoba.controller.HorarioController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="830.0" layoutX="1.0" onMouseClicked="#deseleccionarElementos" pickOnBounds="true">
+         <image>
+            <Image url="@../images/atras.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="33.0" layoutY="126.0" prefHeight="25.0" prefWidth="791.0">
+         <children>
+            <Label alignment="TOP_RIGHT" prefHeight="28.0" prefWidth="174.0" text="Hora Salida" textOverrun="CLIP" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="135.0" text="Hora Entrada">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <GridPane alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="661.0" GridPane.columnIndex="1">
+               <children>
+                  <TextField alignment="CENTER" editable="false" prefHeight="26.0" prefWidth="50.0" text=":" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow choke="0.33" color="#0cc4e4" height="38.79" radius="24.825" width="62.51" />
+                     </effect>
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="cmbHoraE" disable="true" prefHeight="25.0" prefWidth="119.0" promptText="hora" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow choke="0.33" color="#0cc4e4" height="50.65" radius="27.79" width="62.51" />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox fx:id="cmbMinutoE" disable="true" prefHeight="25.0" prefWidth="117.0" promptText="min" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow choke="0.33" color="#0cc4e4" height="50.65" radius="27.79" width="62.51" />
+                     </effect>
+                  </ComboBox>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="85.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="7.0" prefWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="85.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="60.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <GridPane alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="661.0" GridPane.columnIndex="3">
+               <children>
+                  <TextField alignment="CENTER" editable="false" prefHeight="26.0" prefWidth="38.0" text=":" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow choke="0.33" color="#0cc4e4" height="38.79" radius="24.825" width="62.51" />
+                     </effect>
+                     <font>
+                        <Font name="Comic Sans MS" size="12.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="cmbHoraS" disable="true" prefHeight="25.0" prefWidth="125.0" promptText="hora" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow choke="0.33" color="#0cc4e4" height="50.65" radius="27.79" width="62.51" />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox fx:id="cmbMinutoS" disable="true" prefHeight="25.0" prefWidth="121.0" promptText="min" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <effect>
+                        <InnerShadow choke="0.33" color="#0cc4e4" height="50.65" radius="27.79" width="62.51" />
+                     </effect>
+                  </ComboBox>
+               </children>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="60.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="85.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="7.0" prefWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="85.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="60.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="246.0" minWidth="10.0" prefWidth="235.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="0.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="235.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane alignment="CENTER_RIGHT" layoutX="36.0" layoutY="166.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="791.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="122.0" minWidth="10.0" prefWidth="34.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="106.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="35.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="119.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.0" minWidth="10.0" prefWidth="35.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.0" minWidth="10.0" prefWidth="123.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.0" minWidth="10.0" prefWidth="34.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="418.0" minWidth="10.0" prefWidth="122.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="492.0" minWidth="10.0" prefWidth="34.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="552.0" minWidth="10.0" prefWidth="102.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="cbLunes" disable="true" mnemonicParsing="false" prefHeight="28.0" prefWidth="28.0">
+               <font>
+                  <Font name="AR CENA" size="20.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.23" color="#0cc4e4" height="28.18" radius="11.055" width="18.04" />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="cbMartes" disable="true" mnemonicParsing="false" GridPane.columnIndex="2">
+               <font>
+                  <Font name="AR CENA" size="20.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.23" color="#0cc4e4" height="28.18" radius="11.055" width="18.04" />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="cbMiercoles" disable="true" mnemonicParsing="false" GridPane.columnIndex="4">
+               <font>
+                  <Font name="AR CENA" size="20.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.23" color="#0cc4e4" height="28.18" radius="11.055" width="18.04" />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="cbJueves" disable="true" mnemonicParsing="false" GridPane.columnIndex="6">
+               <font>
+                  <Font name="AR CENA" size="20.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.23" color="#0cc4e4" height="28.18" radius="11.055" width="18.04" />
+               </effect>
+            </CheckBox>
+            <CheckBox fx:id="cbViernes" disable="true" mnemonicParsing="false" prefHeight="28.0" prefWidth="36.0" GridPane.columnIndex="8">
+               <font>
+                  <Font name="AR CENA" size="20.0" />
+               </font>
+               <effect>
+                  <InnerShadow choke="0.23" color="#0cc4e4" height="28.18" radius="11.055" width="18.04" />
+               </effect>
+            </CheckBox>
+            <Label prefHeight="30.0" prefWidth="74.0" text="Viérnes" GridPane.columnIndex="9">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="28.0" prefWidth="90.0" text="Jueves" GridPane.columnIndex="7">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="28.0" prefWidth="112.0" text="Miércoles" GridPane.columnIndex="5">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="28.0" prefWidth="102.0" text="Martes" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="28.0" prefWidth="89.0" text="Lunes" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblHorarios" layoutX="22.0" layoutY="232.0" onKeyReleased="#selecionarElementos" onMouseClicked="#selecionarElementos" prefHeight="288.0" prefWidth="789.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="62.0" text="Código" />
+            <TableColumn fx:id="colEntrada" prefWidth="150.0" text="Hora Entrada" />
+            <TableColumn fx:id="colSalida" prefWidth="150.0" text="Hora  Salida" />
+            <TableColumn fx:id="colLunes" prefWidth="85.0" text="Lunes" />
+            <TableColumn fx:id="colMartes" prefWidth="85.0" text="Martes" />
+            <TableColumn fx:id="colMiercoles" prefWidth="85.0" text="Miércoles" />
+            <TableColumn fx:id="colJueves" prefWidth="85.0" text="Jueves" />
+            <TableColumn fx:id="colViernes" prefWidth="85.0" text="Viérnes" />
+         </columns>
+         <effect>
+            <DropShadow color="#0691ee" height="35.83" radius="27.05" width="74.37" />
+         </effect>
+      </TableView>
+      <GridPane layoutX="59.0" layoutY="530.0" prefHeight="42.0" prefWidth="740.0">
+         <children>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="160.0" text="Eliminar" GridPane.columnIndex="1">
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="160.0" text="Editar" GridPane.columnIndex="2">
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="36.0" prefWidth="160.0" text="Reporte" GridPane.columnIndex="3">
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="36.0" prefWidth="160.0" text="Nuevo">
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="21.0" />
+               </font>
+            </Button>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TextField fx:id="txtLunes" layoutX="55.0" layoutY="4.0" prefHeight="25.0" prefWidth="61.0" visible="false" />
+      <TextField fx:id="txtMartes" layoutX="122.0" layoutY="32.0" prefHeight="25.0" prefWidth="61.0" visible="false" />
+      <TextField fx:id="txtMiercoles" layoutX="183.0" layoutY="4.0" prefHeight="25.0" prefWidth="61.0" visible="false" />
+      <TextField fx:id="txtJueves" layoutX="244.0" layoutY="32.0" prefHeight="25.0" prefWidth="61.0" visible="false" />
+      <ImageView fitHeight="127.0" fitWidth="121.0" layoutX="709.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@../images/Horarios.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtHoraEntrada" editable="false" layoutX="67.0" layoutY="4.0" prefHeight="26.0" prefWidth="98.0" visible="false">
+         <effect>
+            <InnerShadow choke="0.33" color="#0cc4e4" height="38.79" radius="24.825" width="62.51" />
+         </effect>
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtHoraSalida" editable="false" layoutX="69.0" layoutY="44.0" prefHeight="26.0" prefWidth="98.0" visible="false">
+         <effect>
+            <InnerShadow choke="0.33" color="#0cc4e4" height="38.79" radius="24.825" width="62.51" />
+         </effect>
+         <font>
+            <Font name="Comic Sans MS" size="12.0" />
+         </font>
+      </TextField>
+      <Text fx:id="txtTitulo" layoutX="316.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HORARIOS">
+         <font>
+            <Font name="Times New Roman" size="45.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

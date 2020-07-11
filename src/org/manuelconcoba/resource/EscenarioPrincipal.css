@@ -1,0 +1,17 @@
+
+
+.label{
+    -fx-font: 100px "Times New Roman";
+    -fx-text-fill: #000000;
+}
+
+#lbFecha{
+    -fx-font: 35px "Times New Roman";
+    -fx-text-fill: #000000;
+}
+
+.split-menu-button>.label{
+     -fx-font: 20px "Times New Roman";
+}
+
+

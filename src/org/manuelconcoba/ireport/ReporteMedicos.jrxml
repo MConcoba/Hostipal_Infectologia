@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteMedicos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="539" leftMargin="28" rightMargin="28" topMargin="56" bottomMargin="56" uuid="11c40aa2-fc8b-4546-a713-2cae9d2f85d8">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="167"/>
+	<property name="ireport.y" value="35"/>
+	<property name="ireport.callouts" value="##Wed Jul 03 12:59:30 CST 2019"/>
+	<queryString>
+		<![CDATA[call sp_ListarMedicos();]]>
+	</queryString>
+	<field name="codigoMedico" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="licenciaMedica" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombres" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="turnoMaximo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="106" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="1" y="0" width="536" height="106" uuid="b802812d-b3ba-4404-bccf-1c740b0e0e71"/>
+				<imageExpression><![CDATA["E:\\Proyectin.com\\Hospital_Infectologia_2018551\\src\\org\\manuelconcoba\\images\\newae.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="18" width="571" height="88" uuid="35e440f2-5fd6-4679-95fc-e9f08667ef12"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="48"/>
+				</textElement>
+				<text><![CDATA[Médicos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="18" width="96" height="29" uuid="ef9e64ed-975d-43ce-aa48-b6a25130f9da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="16"/>
+				</textElement>
+				<text><![CDATA[Reporte de ]]></text>
+			</staticText>
+			<elementGroup/>
+			<image>
+				<reportElement x="1" y="47" width="149" height="50" uuid="c0583e2e-a7ab-4435-a71a-4eb9e1296b8b"/>
+				<imageExpression><![CDATA["E:\\Proyectin.com\\Hospital_Infectologia_2018551\\src\\org\\manuelconcoba\\images\\newLogo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="74" splitType="Stretch">
+			<image>
+				<reportElement x="483" y="18" width="54" height="56" uuid="fb7f9677-1f98-4449-aae9-c4bd235aa6a5"/>
+				<imageExpression><![CDATA["E:\\Proyectin.com\\Hospital_Infectologia_2018551\\src\\org\\manuelconcoba\\images\\Medico.png"]]></imageExpression>
+			</image>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="334" y="0" width="204" height="18" uuid="37e9f110-7a9b-4b06-8f45-b3cd820cca2c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="30" width="149" height="44" uuid="da66abe6-a6dc-4cf1-85bc-5f06264288b0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Segoe Print" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA["No hay medicina que cure lo que no cura la felicidad"]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="0" width="95" height="32" uuid="010cb2a5-3d20-47fa-a03b-b31158919247"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Licencia Medica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="175" y="0" width="100" height="32" uuid="f47c1584-a1d7-4a6a-b650-08c7ea6958fc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombres]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="104" height="32" uuid="a95a7832-5990-4f23-88e5-07d4ff8db6f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellidos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="379" y="1" width="80" height="31" uuid="c6743cde-e4f7-4d56-9bf6-495cb9baeb27"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Entrada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="459" y="0" width="80" height="32" uuid="4d4b760b-ca94-4631-af51-81b6d7a22db7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salida]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="539" height="1" uuid="0c74a568-6e59-4b03-9ad6-058ce0413808"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="1" y="2" width="80" height="30" uuid="4ef8ae8d-6947-4816-84b3-d4410d0f3e13"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código Medico]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="31" width="539" height="1" uuid="b34c9fc3-9d11-4377-a0c6-e88bcf2e9bfe"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#000000"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="175" y="0" width="100" height="22" uuid="e036f58b-1bf9-44e3-9117-966f48a012da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="0" width="104" height="22" uuid="11d7a084-29bd-4235-97be-c7af1625876d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="379" y="0" width="80" height="22" uuid="b84bf33f-95ad-42e7-9e02-786e3785645b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="459" y="1" width="80" height="21" uuid="0d580bd0-a4a6-4c1e-ba88-808d3255bd1d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaSalida}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="0" width="538" height="1" uuid="53d98fab-a68c-4a59-8823-f924dbbe634a"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="-30" width="1" height="52" uuid="47884de4-779e-41e2-87db-3cc251b280fe"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="80" y="1" width="95" height="21" uuid="9c6daec6-0ffd-4943-9b1c-03ea24e027d1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{licenciaMedica}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="80" height="22" uuid="46c8675f-128f-44f7-9c7b-d8a758c1d8e0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoMedico}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="80" y="-30" width="1" height="50" uuid="5f102687-0b73-41f3-87b7-5765d08daf82"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="174" y="-30" width="1" height="51" uuid="e0485f3e-11d7-438e-bb69-436d095d37e3"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="275" y="-30" width="1" height="50" uuid="69a1b348-a179-4a4b-bf99-4240cff82a3c"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="379" y="-30" width="1" height="50" uuid="148aae31-9596-4cef-8773-f48e3e9fe62e"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="458" y="-30" width="1" height="52" uuid="ee3e4bd4-f4aa-41d8-81a4-1dce271e0bdd"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="537" y="-30" width="1" height="52" uuid="942d1dd5-43be-43cc-bb70-8b37183fd760"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="146" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement x="1" y="68" width="538" height="78" uuid="85825ee7-999f-45c7-abc1-dd0a9bc0df7d"/>
+				<imageExpression><![CDATA["E:\\Proyectin.com\\Hospital_Infectologia_2018551\\src\\org\\manuelconcoba\\images\\estesiii.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="1" y="98" width="185" height="28" forecolor="#000000" uuid="71718526-02d3-4b66-899d-71a03eae72a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe Print" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hospital Casa de los Ángeles Application..]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="418" y="106" width="80" height="20" uuid="3b136225-7077-49d2-a1e1-9396331284fc"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pág. "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="498" y="106" width="40" height="20" uuid="5892904d-3383-45d2-8332-3b7b49b5c7f6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="174" y="17" width="224" height="64" uuid="e0392fae-7a60-475e-bd12-2556bd965218"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe Print" size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA["El arte de la medicina consiste en entretener al paciente mientras la naturaleza cura la enfermedad"]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="60" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="538" height="1" uuid="329ab393-6d01-4444-8465-f38b34e92f65"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#003399"/>
+				</graphicElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

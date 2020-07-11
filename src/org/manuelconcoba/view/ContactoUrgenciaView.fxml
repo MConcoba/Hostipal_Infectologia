@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.manuelconcoba.controller.ContactoUrgenciaController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1000.0" layoutX="1.0" layoutY="1.0" onMouseClicked="#deseleccionarElementos" pickOnBounds="true">
+         <image>
+            <Image url="@../images/atras.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="38.0" layoutY="97.0" prefHeight="95.0" prefWidth="927.0">
+         <children>
+            <Label text="Nombres">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombres" editable="false" prefHeight="25.0" prefWidth="680.0" GridPane.columnIndex="1">
+               <effect>
+                  <InnerShadow choke="0.33" color="#0cc4e4" height="38.79" radius="24.825" width="62.51" />
+               </effect>
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtApellidos" editable="false" prefHeight="25.0" prefWidth="680.0" GridPane.columnIndex="3">
+               <effect>
+                  <InnerShadow choke="0.33" color="#0cc4e4" height="38.79" radius="24.825" width="62.51" />
+               </effect>
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="145.0" text="Apellidos" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label prefHeight="22.0" prefWidth="113.0" text="Télefono" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNumeroContacto" editable="false" onKeyTyped="#soloNumeros" prefHeight="26.0" prefWidth="221.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow choke="0.33" color="#0cc4e4" height="38.79" radius="24.825" width="62.51" />
+               </effect>
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="145.0" text="Código Paciente" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbCodigoPaciente" disable="true" prefHeight="25.0" prefWidth="271.0" promptText="                        --- Seleccionar ---" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <effect>
+                  <InnerShadow choke="0.33" color="#0cc4e4" height="23.96" radius="18.1525" width="50.65" />
+               </effect>
+            </ComboBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="390.0" minWidth="10.0" prefWidth="84.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="713.0" minWidth="10.0" prefWidth="342.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="713.0" minWidth="10.0" prefWidth="155.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="713.0" minWidth="10.0" prefWidth="345.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="47.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TableView fx:id="tblContactoUrgencia" layoutX="38.0" layoutY="209.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="315.0" prefWidth="927.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="56.0" text="Código" />
+            <TableColumn fx:id="colNombres" prefWidth="303.0" text="Nombres" />
+            <TableColumn fx:id="colApellidos" prefWidth="302.0" text="Apellidos" />
+            <TableColumn fx:id="colTelefono" prefWidth="143.0" text="Télefono" />
+            <TableColumn fx:id="colCodigoPaciente" prefWidth="122.0" text="Código Paciente" />
+         </columns>
+         <effect>
+            <DropShadow color="#0691ee" height="35.83" radius="27.05" width="74.37" />
+         </effect>
+      </TableView>
+      <ImageView fitHeight="95.0" fitWidth="132.0" layoutX="858.0" layoutY="14.0" onMouseClicked="#ventanaPaciente" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/uregenciacontacto.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <GridPane layoutX="119.0" layoutY="544.0" prefHeight="42.0" prefWidth="850.0">
+         <children>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="160.0" text="Eliminar" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="160.0" text="Editar" GridPane.columnIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="36.0" prefWidth="160.0" text="Reporte" GridPane.columnIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="57.0" prefWidth="159.0" text="Nuevo" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Button>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Text fx:id="txtTitulo" layoutX="300.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONTACTO URGENCIA">
+         <font>
+            <Font name="Times New Roman" size="45.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
