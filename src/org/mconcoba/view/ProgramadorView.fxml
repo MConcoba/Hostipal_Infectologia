@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mconcoba.controller.ProgramadorController">
+   <children>
+      <ImageView fitHeight="530.0" fitWidth="650.0" opacity="0.47" pickOnBounds="true">
+         <image>
+            <Image url="@../images/alreves.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="157.0" fitWidth="423.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="245.0" fitWidth="182.0" layoutX="407.0" layoutY="202.0" onMouseClicked="#borrarTodo" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/fotografia.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="91.0" layoutY="364.0" prefHeight="35.0" prefWidth="95.0" text="2018551" wrapText="true">
+         <font>
+            <Font name="AR CENA" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="338.0" prefHeight="26.0" prefWidth="53.0" text="Carné" wrapText="true">
+         <font>
+            <Font name="AR CENA" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="212.0" prefHeight="35.0" prefWidth="95.0" text="Apellidos" wrapText="true">
+         <font>
+            <Font name="AR CENA" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="404.0" prefHeight="26.0" prefWidth="53.0" text="Grado" wrapText="true">
+         <font>
+            <Font name="AR CENA" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="422.0" prefHeight="26.0" prefWidth="291.0" text="5to PERITO EN INFORMÁTICA" wrapText="true">
+         <font>
+            <Font name="AR CENA" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="277.0" prefHeight="35.0" prefWidth="95.0" text="Nombres" wrapText="true">
+         <font>
+            <Font name="AR CENA" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="242.0" prefHeight="26.0" prefWidth="182.0" text="CONCOBA NÚÑEZ" wrapText="true">
+         <font>
+            <Font name="AR CENA" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="303.0" prefHeight="26.0" prefWidth="237.0" text="MANUEL ALESSANDRO" wrapText="true">
+         <font>
+            <Font name="AR CENA" size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="123.0" fitWidth="113.0" layoutX="517.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Programador.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mconcoba.controller.MedicoEspecialidadController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1000.0" onMouseClicked="#deleccionarElementos" pickOnBounds="true">
+         <image>
+            <Image url="@../images/atras.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="37.0" layoutY="116.0" prefHeight="100.0" prefWidth="900.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="175.0" text="Código Especialidad" GridPane.columnIndex="4">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbCodigoHorario" disable="true" prefHeight="25.0" prefWidth="190.0" promptText="--- Seleccionar ---" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.33" color="#0cc4e4" height="23.96" radius="18.1525" width="50.65" />
+               </effect>
+            </ComboBox>
+            <ComboBox fx:id="cmbCodigoEspecialidad" disable="true" prefHeight="25.0" prefWidth="190.0" promptText="--- Seleccionar ---" GridPane.columnIndex="5">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.33" color="#0cc4e4" height="23.96" radius="18.1525" width="50.65" />
+               </effect>
+            </ComboBox>
+            <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="132.0" text="Código Horario" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="141.0" text="Código Médico">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbCodigoMedico" disable="true" prefHeight="25.0" prefWidth="190.0" promptText=" --- Seleccionar ---" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.33" color="#0cc4e4" height="23.96" radius="18.1525" width="50.65" />
+               </effect>
+            </ComboBox>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="446.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="550.0" minWidth="0.0" prefWidth="145.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="518.0" minWidth="10.0" prefWidth="134.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="518.0" minWidth="10.0" prefWidth="142.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="518.0" minWidth="10.0" prefWidth="179.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="518.0" minWidth="10.0" prefWidth="150.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <TableView fx:id="tblMedicoEspecialidad" layoutX="23.0" layoutY="237.0" onKeyReleased="#selecionarElementos" onMouseClicked="#selecionarElementos" prefHeight="334.0" prefWidth="947.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="60.0" text="Código" />
+            <TableColumn fx:id="colCodigoMedico" prefWidth="78.0" text="Médico" />
+            <TableColumn fx:id="colNombres" prefWidth="192.0" text="Nombres Apellidos" />
+            <TableColumn fx:id="colCodigoEspecialidad" prefWidth="112.66665649414062" text="Codigo Especiadad" />
+            <TableColumn fx:id="colEspecialidad" prefWidth="171.0" text="Especialidad" />
+            <TableColumn fx:id="colCodigoHorario" prefWidth="95.6666259765625" text="Código Horaio" />
+            <TableColumn fx:id="colTurno" prefWidth="91.6666259765625" text="Turno Máximo" />
+            <TableColumn fx:id="colHoras" prefWidth="148.3333740234375" text="Entrada / Salida" />
+         </columns>
+         <effect>
+            <DropShadow color="#0691ee" height="35.83" radius="27.05" width="74.37" />
+         </effect>
+      </TableView>
+      <ImageView fitHeight="159.0" fitWidth="175.0" layoutX="841.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <image>
+            <Image url="@../images/Especialidades.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="120.0" layoutY="594.0" prefHeight="42.0" prefWidth="850.0">
+         <children>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="160.0" text="Eliminar" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="160.0" text="Editar" GridPane.columnIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="36.0" prefWidth="160.0" text="Reporte" GridPane.columnIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="57.0" prefWidth="159.0" text="Nuevo" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="22.0" />
+               </font>
+            </Button>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Text fx:id="txtTitulo" layoutX="244.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MÉDICO ESPECIALIDAD">
+         <font>
+            <Font name="Times New Roman" size="45.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

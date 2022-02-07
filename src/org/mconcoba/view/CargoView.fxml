@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mconcoba.controller.CargoController">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="600.0" onMouseClicked="#deseleccionarElementos" pickOnBounds="true">
+         <image>
+            <Image url="@../images/atras.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblCargos" layoutX="93.0" layoutY="171.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="385.0" prefWidth="440.0">
+         <columns>
+            <TableColumn fx:id="colCodigo" prefWidth="66.0" text="Código" />
+            <TableColumn fx:id="colCargo" prefWidth="373.0" text="Cargos" />
+         </columns>
+         <effect>
+            <InnerShadow choke="0.33" color="#0cc4e4" height="56.58" radius="29.2725" width="62.51" />
+         </effect>
+      </TableView>
+      <GridPane layoutX="45.0" layoutY="127.0" prefHeight="30.0" prefWidth="510.0">
+         <children>
+            <Label prefHeight="28.0" prefWidth="49.0" text="Cargo">
+               <font>
+                  <Font name="Times New Roman" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCargo" editable="false" prefHeight="26.0" prefWidth="502.0" GridPane.columnIndex="1">
+               <effect>
+                  <InnerShadow choke="0.33" color="#0cc4e4" height="38.79" radius="24.825" width="62.51" />
+               </effect>
+               <font>
+                  <Font name="Comic Sans MS" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="318.0" minWidth="10.0" prefWidth="57.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="614.0" minWidth="10.0" prefWidth="453.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <ImageView fitHeight="121.0" fitWidth="135.0" layoutX="451.0" layoutY="14.0" onMouseClicked="#menuPrincipal" pickOnBounds="true">
+         <image>
+            <Image url="@../images/cargos.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="32.0" layoutY="594.0" prefHeight="42.0" prefWidth="561.0">
+         <children>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="36.0" prefWidth="120.0" text="Eliminar" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" prefHeight="36.0" prefWidth="120.0" text="Editar" GridPane.columnIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnReporte" mnemonicParsing="false" onAction="#reporte" prefHeight="36.0" prefWidth="120.0" text="Reporte" GridPane.columnIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="21.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="42.0" prefWidth="120.0" text="Nuevo" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow choke="0.26" color="#077ffa" height="61.03" radius="31.1275" width="65.48" />
+               </effect>
+               <font>
+                  <Font name="Times New Roman" size="21.0" />
+               </font>
+            </Button>
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Text fx:id="txtTitulo1" layoutX="221.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CARGOS">
+         <font>
+            <Font name="Times New Roman" size="45.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
